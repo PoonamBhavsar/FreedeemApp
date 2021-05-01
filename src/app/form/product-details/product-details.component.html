@@ -1,0 +1,41 @@
+
+<div>
+    <app-home [blnProduct]="false"></app-home>
+</div>
+<div class="album py-5 mt-5 bg-light">
+    <div *ngIf="blnError" class="text-center">
+        <span class="red">{{strMessage}}</span>
+      </div>
+      <div *ngIf="blnSuccess" class="text-center">
+        <span class="green">{{strMessage}}</span>
+      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="card-img-top"
+                src="../../assets/images/nameLogo.png"
+                    alt="Card image cap">
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm"  style="height: 50% !important;">
+                   
+                    <div class="card-body mt-5">
+                        <div class="font">{{product['name']}}</div>
+                        <div class="font">{{product['price']}}</div>
+                        <p class="card-text font">{{product['description']}}</p>
+                        <div class="text-muted font">{{product['valid_upto']}}</div>
+                        <!-- <span>{{product['valid_upto']}}</span> -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary mt-5" (click)="addToCart()">Add to Cart</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+

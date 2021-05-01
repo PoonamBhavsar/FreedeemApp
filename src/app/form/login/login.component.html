@@ -1,0 +1,41 @@
+
+
+<div>
+    <app-home [blnProduct]="false"></app-home>
+</div>
+
+<div class="mt-5 mb-5 ms-5 text-center">
+    <div *ngIf="blnError" class="text-center">
+        <span class="red">{{strMessage}}</span>
+      </div>
+      <div *ngIf="blnSuccess" class="text-center">
+        <span class="green">{{strMessage}}</span>
+      </div>
+
+     <form *ngIf="!blnOtp" class="form-signin">
+        <img class="mb-4" src="../../assets/images/nameLogo.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+        <label for="Mobile" class="sr-only">Mobile Number</label>
+        <input type="text" id="inputEmail" value="" name="mobileNo" class="form-control logon" [(ngModel)]="mobileNo" placeholder="Mobile Number" required autofocus>
+        <!-- <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required> -->
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="submit()">Sign up</button>
+      </form>
+
+      <form *ngIf="blnOtp" class="form-signin">
+        <img class="mb-4" src="../../assets/nameLogo.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Enter OTP</label>
+        <input type="email" id="inputEmail" class="form-control logon" placeholder="OTP" required autofocus>
+        <!-- <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required> -->
+        <div>
+        <button class="btn btn-lg btn-primary btn-block mt-5" type="submit" (click)="submitOtp()">Submit</button>
+    </div>
+      </form>
+</div>
