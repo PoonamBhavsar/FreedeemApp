@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.green{
+    color: green;
+    font-size: 16px;
+}
+
+.red{
+    color: red;
+    font-size: 16px;
+}
+
+.marT32{
+    margin-top: 10% !important;
+}

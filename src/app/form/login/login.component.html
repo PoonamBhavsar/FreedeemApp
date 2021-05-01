@@ -1,10 +1,8 @@
-
-
 <div>
     <app-home [blnProduct]="false"></app-home>
 </div>
 
-<div class="mt-5 mb-5 ms-5 text-center">
+<div class="mt-5 mb-5 ms-5 marT32 text-center">
     <div *ngIf="blnError" class="text-center">
         <span class="red">{{strMessage}}</span>
       </div>
@@ -12,7 +10,7 @@
         <span class="green">{{strMessage}}</span>
       </div>
 
-     <form *ngIf="!blnOtp" class="form-signin">
+     <form *ngIf="!blnOtp" class="form-signin mt-5">
         <img class="mb-4" src="../../assets/images/nameLogo.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
         <label for="Mobile" class="sr-only">Mobile Number</label>

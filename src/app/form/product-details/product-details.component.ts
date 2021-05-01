@@ -25,7 +25,7 @@ export class ProductDetailsComponent implements OnInit {
     this.service.getLoggedIn().subscribe(data=>{
       if(data['loggedIn'] == true){
         this.blnSuccess = true;
-        this.strMessage="Producr Added to cart succesfully !!";
+        this.strMessage="Product Added to cart Succesfully !!";
       }
       else{
         this.router.navigate(['login']);
